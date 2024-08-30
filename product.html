@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"> <!-- Google Fonts -->
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+          <a href="home.html" class="logo">H'ALLURE</a>
+          <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+              <a href="customer.html" class="dropbtn">Customer</a>
+              <div class="dropdown-content">
+                <a href="#" id="customer-search-link">Customer Search</a>
+                <a href="#">Consultation</a>
+                <a href="#" id="customer-list-link">Customer List</a>
+              </div>
+            </div>
+            <a href="about.html">Order</a>
+            <a href="product.html">Product</a>
+            <a href="login.html">Warehouse</a>
+            <a href="login.html">Accounting</a>
+          
+        </section>
+    </header>
+    <main class="product-page">
+      <section class="filter-section">
+        <h2>Filter by</h2>
+    
+        <div class="filter-option">
+          <label for="price">Price</label>
+          <input type="range" id="price" name="price" min="1499000" max="2900000" value="1499000" step="10000">
+          <div class="price-labels">
+            <span id="min-price">1.499.000 VND</span>
+            <span id="current-price">1.499.000 VND</span>
+          </div>
+        </div>
+    
+        <div class="filter-option">
+          <label for="colorFilter">Color:</label>
+          <select id="colorFilter">
+            <option value="">All</option>
+            <!-- Options will be dynamically loaded here -->
+          </select>
+        </div>
+    
+        <div class="filter-option">
+          <label for="typeFilter">Type:</label>
+          <select id="typeFilter">
+            <option value="">All</option>
+            <!-- Options will be dynamically loaded here -->
+          </select>
+        </div>
+    
+        <div class="filter-option">
+          <label for="styleFilter">Style:</label>
+          <select id="styleFilter">
+            <option value="">All</option>
+            <!-- Options will be dynamically loaded here -->
+          </select>
+        </div>
+      </section>
+    
+      <section id="productContainer">
+        <!-- Products will be displayed here -->
+      </section>
+    </main>
+    
+
+<script src="js/index.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

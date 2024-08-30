@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"> <!-- Google Fonts -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+    
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px; /* Adjusted for fixed header */
+        }
+    
+        .footer-text {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+        }
+    
+        /* Separator Styles */
+        .separator {
+            width: 30%; /* Decrease width of the separator to make it shorter */
+            height: 2px;
+            background-color: #000;
+            margin: 20px 0;
+        }
+    
+        /* Form Styles */
+        form#customer-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 60px; /* Add margin-top to create more space above the form */
+        }
+    
+        form#customer-form input,
+        form#customer-form textarea {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 15px; /* Thêm khoảng cách giữa các trường */
+        }
+
+        form#customer-form input::placeholder,
+        form#customer-form textarea::placeholder {
+            color: #999;
+        }
+
+        form#customer-form button {
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #333;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 10px auto 0 auto; /* Căn giữa và thêm khoảng cách phía trên */
+        display: block; /* Chuyển nút thành block để áp dụng margin auto */
+        width: 100%; /* Tùy chọn: Đặt độ rộng cho nút */
+        }
+
+    
+        form#customer-form button:hover {
+            background-color: #555;
+        }
+
+        
+
+
+        /* Table Styles */
+      
+        table {
+            width: 100%; /* Chiếm toàn bộ chiều rộng của màn hình */
+            border-collapse: collapse; /* Kết hợp các đường viền của các ô */
+            font-family: 'Poppins', sans-serif; /* Sử dụng font-family Poppins */
+            margin-top: 20px; /* Khoảng cách từ phần tử phía trên */
+        }
+
+        th, td {
+            padding: 12px; /* Khoảng cách giữa nội dung và viền ô */
+            border: 1px solid #ddd; /* Đường viền ô */
+            text-align: left; /* Căn lề trái cho nội dung ô */
+            font-size: 16px; /* Kích thước chữ */
+        }
+
+        th {
+            background-color: #333; /* Màu nền cho các ô tiêu đề */
+            color: white; /* Màu chữ cho các ô tiêu đề */
+            font-weight: bold; /* Chữ in đậm cho các ô tiêu đề */
+        }
+
+        #customer-list table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #customer-list th, #customer-list td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        #customer-list th {
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #customer-list td {
+            font-size: 16px;
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+          <a href="home.html" class="logo">H'ALLURE</a>
+          <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+              <a href="customer.html" class="dropbtn">Customer</a>
+              <div class="dropdown-content">
+                <a href="#" id="customer-search-link">Customer Search</a>
+                <a href="#">Consultation</a>
+                <a href="#" id="customer-list-link">Customer List</a>
+              </div>
+            </div>
+            <a href="about.html">Order</a>
+            <a href="product.html">Product</a>
+            <a href="login.html">Warehouse</a>
+          </nav>
+          <a href="#" class="btn" style="margin-top: 0;">Login</a>
+        </section>
+    </header>
+      
+    <main>
+        <div class="footer-text">CUSTOMER INFORMATION</div>
+        <div class="separator"></div>
+    
+        <!-- Customer Search Form -->
+        <form id="customer-form" style="display: none;">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <!-- Response area for displaying submitted data -->
+        <div id="response"></div>
+
+        <!-- Customer List area -->
+        <div id="customer-list" style="display: none;"></div>
+    </main>
+    
+    <script src="js/index.js"></script>
+</body>

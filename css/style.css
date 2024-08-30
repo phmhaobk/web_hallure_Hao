@@ -1,0 +1,603 @@
+/* Font Awesome CDN link */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* Root Variables */
+:root {
+  --main-color: #838689; 
+  --red: red;
+  --light-color: #777; 
+  --light-bg: #eee;
+  --black: #2c3e50;
+  --white: #fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  --border: .1rem solid rgba(0, 0, 0, .2);
+}
+
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; 
+  border: none; 
+  font-family: 'Poppins', sans-serif; /* Áp dụng font Poppins */
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: var(--white); 
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Button Style */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: var(--white);
+  background-color: var(--main-color);
+  border-radius: .5rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Font Poppins cho button */
+}
+
+.btn:hover {
+  background-color: var(--black);
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: 'Poppins', sans-serif; /* Áp dụng font Poppins cho toàn bộ body */
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(90deg, #000000, #555555);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.4rem 1.3rem; /* Tăng chiều cao header */
+}
+
+.header .logo {
+  font-size: 4.5rem; /* Kích thước chữ logo */
+  font-weight: bold;
+  color: #ffffff; /* Đổi màu chữ logo thành trắng */
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+}
+
+/* Header Styles */
+/* Header Styles */
+.header_product {
+  background-color: transparent; /* Nền trong suốt */
+  box-shadow: none; /* Loại bỏ bóng mờ nếu không muốn */
+  position: sticky; /* Đặt header dính cố định khi cuộn */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+  padding: 0.4rem 1.3rem; /* Padding của header */
+}
+
+/* Logo Styles */
+.header_product .logo {
+  font-size: 4.5rem; /* Kích thước chữ logo */
+  font-weight: bold;
+  color: hsl(0, 3%, 15%); /* Màu chữ logo */
+  text-decoration: none;
+  font-family: "Noto Serif", serif; /* Font của logo */
+  position: fixed; /* Đặt logo cố định ở một vị trí */
+  top: 0; /* Vị trí ở trên cùng */
+  left: 0; /* Vị trí bên trái */
+  padding: 0.5rem 1rem; /* Padding xung quanh logo nếu cần */
+  margin: 0; /* Loại bỏ khoảng cách mặc định */
+}
+
+
+
+
+
+
+
+
+.header .navbar a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 0 15px;
+  font-size: 1.6rem;
+  color: #fff; /* Đổi màu chữ của các link thành trắng */
+  border-radius: .5rem;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif; /* Sử dụng font Poppins */
+  text-decoration: none; /* Loại bỏ dấu gạch chân */
+}
+
+.header .navbar a:hover {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: var(--white);
+}
+/* Cải thiện thanh cuộn cho toàn trang */
+/* Cải thiện thanh cuộn cho toàn trang */
+::-webkit-scrollbar {
+  width: 3px; /* Chiều rộng thanh cuộn dọc */
+  height: 3px; /* Chiều cao thanh cuộn ngang */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của thanh cuộn */
+  border-radius: 10px; /* Bo góc thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Màu của thanh cuộn */
+  border-radius: 10px; /* Bo góc thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu của thanh cuộn khi hover */
+}
+
+/* Menu button for small screens */
+#menu-btn {
+  font-size: 3rem;
+  color: #fff; /* Đổi màu của nút menu thành trắng */
+  cursor: pointer;
+  display: none;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  color: var(--black); /* Đổi màu chữ sang màu trắng */
+  background-color:linear-gradient(90deg, #000000, #555555); /* Đặt màu nền cho nút dropdown */
+  padding: 10px;
+  font-family: 'Poppins', sans-serif; 
+  border: none; /* Loại bỏ viền nếu có */
+  border-radius: 5px; /* Tùy chọn: Thêm viền bo tròn */
+  text-decoration: none; /* Đảm bảo không có dấu gạch chân */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--light-bg); /* Đặt màu nền cho dropdown */
+  color: var(--black); /* Đổi màu chữ sang màu trắng */
+  min-width: 160px;
+  box-shadow: none; /* Loại bỏ box-shadow nếu không cần */
+  z-index: 1;
+  text-align: left;
+  border-radius: 5px; /* Tùy chọn: Thêm viền bo tròn */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color:var(--black); /* Đổi màu chữ sang màu trắng */
+  padding: 12px 16px;
+  text-decoration: none; /* Đảm bảo không có dấu gạch chân */
+  display: block;
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #555; /* Màu nền khi hover */
+  color: var(--black); /* Màu chữ khi hover */
+  text-decoration: none; /* Đảm bảo không có dấu gạch chân khi hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the color of the dropbtn on hover */
+.dropdown:hover .dropbtn {
+  background-color: #555; /* Đổi màu nền khi hover nút dropdown */
+}
+
+
+
+/*Header end*/
+/* Toàn bộ trang */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Khung chứa sản phẩm và bộ lọc */
+.product-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+/* Phần bộ lọc */
+/* Khung chứa sản phẩm và bộ lọc */
+.product-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Phần bộ lọc */
+/* Khung chứa sản phẩm và bộ lọc */
+.product-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Phần bộ lọc */
+/* Khung chứa sản phẩm và bộ lọc */
+.filter-section {
+  width: 20%; /* Chiếm 20% chiều rộng trang */
+  height: 425px; /* Chiều cao cố định của khung */
+  border: 1px solid black; /* Viền đen quanh phần bộ lọc */
+  padding: 20px; /* Padding xung quanh nội dung */
+  box-sizing: border-box;
+  margin-left: 1.2cm; /* Lùi phần bộ lọc vào lề 1cm */
+  margin-top: 0.5cm; /* Thêm khoảng cách 0.5cm từ phần trên (header) */
+  background-color: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+  overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá chiều cao */
+}
+
+.filter-option {
+  margin-bottom: 20px;
+}
+
+.filter-option label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.55rem; /* Tăng kích thước font lên 1 size */
+  margin-bottom: 10px;
+}
+
+.filter-option select {
+  font-size: 1.45rem; /* Tăng kích thước font lên 1 size */
+  padding: 8px; /* Thêm padding để làm cho hộp dài ra */
+  width: 48%; /* Giảm chiều rộng của hộp dropdown */
+  height: 36px; /* Tăng chiều cao của hộp dropdown để làm cho nó dài hơn */
+  border: 1px solid black; /* Viền đen mảnh bao quanh hộp dropdown */
+  border-radius: 0; /* Không bo góc */
+  background-color: transparent; /* Nền trong suốt */
+  box-shadow: none; /* Xóa bóng */
+}
+
+
+
+.filter-option input[type="range"] {
+  width: 85%; /* Giảm chiều rộng của thanh trượt */
+  height: 2px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin: 0; /* Giữ thanh trượt không căn giữa */
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between; /* Căn nhãn ở hai đầu của thanh trượt */
+  font-size: 1.1rem;
+  margin-top: 5px;
+  position: relative;
+  width: 85%; /* Chiều rộng của nhãn bằng với thanh trượt */
+}
+
+#min-price {
+  text-align: left;
+  font-size: 1.2rem; /* Tăng kích thước font lên một chút (điều chỉnh theo nhu cầu) */
+}
+
+#current-price {
+  text-align: right;
+  font-size: 1.2rem; /* Tăng kích thước font lên một chút (điều chỉnh theo nhu cầu) */
+}
+
+
+
+/* Phần hiển thị sản phẩm chính( trang sản phẩm) */
+#productContainer {
+  width: 75%; /* Chiếm 75% chiều rộng trang */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Khoảng cách giữa các khung ảnh giảm xuống còn 5px */
+  box-sizing: border-box;
+  margin: 0 auto; /* Căn giữa container */
+}
+
+.product {
+  width: 24%; /* Đã tăng chiều rộng lên một chút để các khung ảnh gần nhau hơn */
+  padding: 0; /* Xóa padding để ảnh lấp đầy khung */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn giữa nội dung theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  position: relative; /* Để thêm lớp phủ */
+  background-color: transparent; /* Nền trong suốt */
+  border: 1px solid black; /* Viền màu đen quanh khung ảnh */
+  border-radius: 0px; /* Góc bo cho khung */
+  overflow: hidden; /* Để tránh ảnh bị tràn ra ngoài khung */
+}
+
+.product img {
+  width: 310px;
+  height: 355px; /* Đặt chiều cao bằng 100% của khung chứa */
+  object-fit: cover; /* Đảm bảo ảnh không bị biến dạng và bao phủ toàn bộ khu vực */
+  background-color: transparent;
+}
+
+.product-content {
+  text-align: center; /* Căn giữa nội dung bên trong khung */
+  padding: 10px 0; /* Khoảng cách giữa nội dung và viền khung */
+  width: 100%; /* Đảm bảo nội dung chiếm toàn bộ chiều rộng */
+  box-sizing: border-box;
+}
+
+.product h3 {
+  font-size: 1.4rem; /* Kích thước chữ tiêu đề sản phẩm */
+  margin: 10px 0;
+  color: #333; /* Màu sắc của tên sản phẩm */
+  font-weight: bold; /* Bôi đậm tên sản phẩm */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.product p {
+  font-size: 1.3rem; /* Tăng kích thước chữ giá sản phẩm lên 1 size */
+  color: #333;
+  margin: 0; /* Loại bỏ margin để tiết kiệm không gian */
+}
+
+.product .price {
+  font-weight: bold;
+  color: #333; /* Màu đỏ cho giá */
+}
+
+.product .price {
+  font-weight: bold;
+  color: #e60000; /* Đảm bảo rằng màu của giá là màu gốc, không thay đổi */
+}
+
+/* Đảm bảo rằng giá không bị ảnh hưởng bởi các kiểu dáng của link */
+a {
+  color: inherit; /* Đảm bảo rằng màu của liên kết không ảnh hưởng đến màu của giá */
+  text-decoration: none; /* Xóa gạch chân của liên kết nếu có */
+}
+
+
+/* Ảnh sản phẩm chi tiết */
+#productDetails {
+  display: flex;
+  justify-content: flex-start; /* Căn chỉnh các phần tử về phía trái */
+  gap: 2cm; /* Khoảng cách giữa khung ảnh và khung thông tin sản phẩm */
+  margin-top: 0.3cm; /* Khoảng cách giữa header và #productDetails */
+  margin-right: 1cm; /* Khoảng cách từ khung thông tin sản phẩm đến lề phải */
+}
+.product-images {
+  position: relative;
+  width: 455px; /* Chiều rộng cố định nhỏ hơn cho khung chứa */
+  height: 600px; /* Chiều cao cố định nhỏ hơn cho khung chứa */
+  overflow-y: scroll; /* Cho phép cuộn dọc */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  scroll-snap-type: y mandatory; /* Kích hoạt cuộn mượt mà */
+  margin: auto; /* Căn giữa khung chứa ảnh */
+  scroll-behavior: smooth;
+}
+
+.product-images::-webkit-scrollbar {
+  width: 3px; /* Đặt độ rộng của thanh cuộn */
+}
+
+.product-images::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); /* Màu của thanh cuộn */
+  border-radius: 4px; /* Bo tròn thanh cuộn */
+  scroll-behavior: smooth;
+}
+
+.product-images::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của khu vực thanh cuộn */
+}
+
+.product-images img {
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khung chứa */
+  height: auto; /* Chiều cao tự động để giữ tỷ lệ ảnh */
+  display: block; /* Xóa khoảng cách dưới ảnh */
+  object-fit: cover; /* Làm cho ảnh khít khung mà không bị biến dạng */
+  scroll-snap-align: start; /* Căn chỉnh cuộn ảnh tại điểm bắt đầu của mỗi ảnh */
+  border: none; /* Xóa đường viền giữa các ảnh */
+}
+
+/* ảnh phụ*/
+/* Khung chứa toàn bộ sản phẩm */
+.product-container {
+  display: flex; /* Sắp xếp các phần tử con theo hàng ngang */
+  gap: 20px; /* Khoảng cách giữa các khung */
+  justify-content: center; /* Căn giữa các khung theo chiều ngang */
+  align-items: flex-start; /* Căn các khung con lên đầu */
+}
+
+/* Khung chứa ảnh thu nhỏ */
+.thumbnail-container {
+  width: 60px; /* Chiều rộng của vùng ảnh thu nhỏ (1/2 so với trước) */
+  height: 600px; /* Chiều cao của vùng ảnh thu nhỏ bằng với chiều cao của ảnh chính */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  padding-right: 10px; /* Khoảng cách bên phải của ảnh thu nhỏ */
+  border-right: 1px solid black; /* Viền đen bên phải của ảnh thu nhỏ */
+  position: relative;
+  flex-shrink: 0; /* Ngăn không cho phần tử bị thu hẹp */
+}
+
+.thumbnail-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Loại bỏ khoảng cách giữa các ảnh thu nhỏ */
+}
+
+.thumbnail-images img {
+  width: 100%; /* Chiều rộng của ảnh thu nhỏ (nhỏ hơn so với trước) */
+  height: 80px; /* Chiều cao của ảnh thu nhỏ (nhỏ hơn so với trước) */
+  object-fit: cover; /* Làm cho ảnh khít khung mà không bị biến dạng */
+  opacity: 0.6; /* Ảnh thu nhỏ mờ hơn */
+  cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua ảnh thu nhỏ */
+  border: none; /* Xóa viền quanh ảnh thu nhỏ */
+  margin-bottom: 5px; /* Khoảng cách giữa các ảnh thu nhỏ */
+}
+
+.thumbnail-images img.active {
+  opacity: 1; /* Ảnh được chọn sẽ rõ hơn */
+  border: 0.2px solid black; /* Viền đậm hơn cho ảnh đang được chọn */
+}
+
+/* thông tin sp*/
+/* Thêm CSS cho khung thông tin sản phẩm */
+.product-info {
+  width: 300px;
+  margin-left: 2cm;
+  padding: 20px;
+  border: 0.1px solid black;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.color-icon {
+  width: 20px; /* Chiều rộng của icon màu */
+  height: 20px; /* Chiều cao của icon màu */
+  border-radius: 50%; /* Bo tròn để tạo hình tròn */
+  margin-top: 10px; /* Khoảng cách từ thông tin màu đến icon màu */
+}
+
+
+/* Tinh chỉnh kiểu dáng cho tiêu đề và các đoạn văn trong khung thông tin */
+.product-info h1 {
+  margin-top: 0;
+  font-size: 1.5rem; /* Kích thước tiêu đề */
+  font-weight: bold; /* Đậm tiêu đề */
+}
+
+.product-info p {
+  margin: 10px 0; /* Khoảng cách giữa các đoạn văn */
+  font-size: 1.3rem; /* Kích thước chữ */
+  line-height: 1.6; /* Khoảng cách dòng để dễ đọc hơn */
+}
+
+/* Tùy chỉnh kiểu dáng của các đoạn văn trong khung thông tin */
+.product-info p.price {
+  font-weight: bold; /* Đậm giá sản phẩm */
+  color: #333; /* Màu chữ của giá sản phẩm */
+}
+
+
+
+
+/* media queries  để điều chỉnh bố cục trang web của bạn khi kích thước màn hình thay đổi. */
+@media (max-width:911px){
+  
+  html{
+    font-size: 55%;
+  }
+
+}
+@media (max-width:768px){
+  
+  #menu-btn{
+    display: inline-block;
+  }
+  .header .flex .navbar{
+
+    position: absolute;
+    top: 99%; left: 0; right: 0;
+    border-top: var(--border);
+    background-color: var(--white);
+    padding: 1rem .5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: .2s linear;
+  }
+  .header .flex .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+  }
+  .header .flex .navbar a{
+    display: block;
+    padding: 1.5rem 2rem;
+  }
+
+}
+/* media queries*/
+@media (max-width:450px){
+  
+  html{
+    font-size: 50%;
+  }
+
+}
+
+
+
